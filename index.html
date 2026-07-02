@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.className += ' js';</script>
+  <title>Giraverse — Encuentra el espacio perfecto para tu gira</title>
+  <meta name="description" content="Giraverse es el directorio de espacios escénicos de España. Descubre salas por aforo, ciudad y rider técnico, contacta directamente y planifica tu gira sin perderte entre PDFs y emails." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Giraverse — El universo de las salas en vivo" />
+  <meta property="og:description" content="Descubre espacios escénicos para tu gira. Aforo, ubicación, rider y contacto de booking en un solo lugar." />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="theme-color" content="#0C0A09" />
+
+  <!-- Fonts: Outfit (familia de marca) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" /></noscript>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Giraverse — inicio">
+        <svg class="brand__mark" width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3 27 9.5v13L16 29 5 22.5v-13L16 3Z" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+          <path d="M16 10l5.5 3.25v6.5L16 23l-5.5-3.25v-6.5L16 10Z" fill="currentColor"/>
+        </svg>
+        <span class="brand__word">giraverse</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#que-es">Qué es</a>
+        <a href="#publicos">Para quién</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#ciudades">Ciudades</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#acceso" class="btn btn--ghost">Iniciar sesión</a>
+        <a href="#waitlist" class="btn btn--primary">Únete</a>
+      </div>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#que-es">Qué es</a>
+      <a href="#publicos">Para quién</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#ciudades">Ciudades</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="btn btn--primary btn--block">Únete a la lista</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__photo" data-img-slot="hero-bg"></div>
+        <div class="hero__glow"></div>
+        <div class="hero__veil"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">El universo de las salas en vivo</p>
+        <h1 class="hero__title reveal">
+          Encuentra el espacio perfecto<br />
+          <span class="grad">para tu próxima gira</span>
+        </h1>
+        <p class="hero__sub reveal">
+          Giraverse reúne los espacios escénicos de España en un solo lugar.
+          Aforo, ubicación, rider técnico y contacto de booking — sin perderte
+          entre PDFs, emails y webs imposibles de encontrar.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#waitlist" class="btn btn--primary btn--lg">Explora espacios</a>
+          <a href="#promociona" class="btn btn--soft btn--lg">Tengo una sala</a>
+        </div>
+
+        <div class="hero__trust reveal">
+          <div class="trust__item"><strong>+16</strong><span>espacios en catálogo</span></div>
+          <div class="trust__divider"></div>
+          <div class="trust__item"><strong>4</strong><span>ciudades y creciendo</span></div>
+          <div class="trust__divider"></div>
+          <div class="trust__item"><strong>Rider</strong><span>técnico descargable</span></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta flotante estilo app -->
+      <div class="hero__visual reveal">
+        <div class="venue-card venue-card--float">
+          <div class="venue-card__img" data-img-slot="venue-hero">
+            <span class="venue-card__badge">Recomendado</span>
+            <button class="venue-card__like" aria-label="Guardar">♡</button>
+          </div>
+          <div class="venue-card__body">
+            <span class="venue-card__loc">BARCELONA · ESPAÑA</span>
+            <span class="venue-card__cap">Aforo: 150 pax</span>
+            <h3>Sala Vol</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STRIP / RESPALDO ============ -->
+    <section class="strip">
+      <div class="container strip__inner reveal">
+        <span class="strip__label">Un proyecto cultural respaldado por</span>
+        <div class="strip__logos">
+          <span class="strip__logo strip__logo--gov">Ministerio de Cultura · Gobierno de España</span>
+          <span class="strip__logo">Ecosistema Artiverse</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ ES / PROBLEMA ============ -->
+    <section class="section" id="que-es">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Qué es Giraverse</span>
+          <h2>El backstage del directo, por fin ordenado</h2>
+          <p class="lead">
+            Montar una gira significa rastrear salas una por una: aforos en una web,
+            el rider en un PDF perdido, el contacto de booking en un email de hace meses.
+            Giraverse lo reúne todo en un directorio vivo donde encuentras, comparas y
+            contactas espacios en minutos.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon" data-icon="search"></div>
+            <h3>Descubre espacios</h3>
+            <p>Explora salas, clubs, auditorios y teatros filtrando por ciudad, aforo y población. Todo el catálogo en un vistazo.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" data-icon="doc"></div>
+            <h3>Datos que importan</h3>
+            <p>Aforo en pax, ubicación, responsable de reservas, production manager y rider técnico descargable en cada ficha.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" data-icon="chat"></div>
+            <h3>Contacta directo</h3>
+            <p>Mensajería integrada entre promotores y salas. De la primera consulta al cierre de fecha, sin salir de la plataforma.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARA QUIÉN ============ -->
+    <section class="section section--alt" id="publicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Para quién</span>
+          <h2>Dos lados del escenario, una plataforma</h2>
+          <p class="lead">Giraverse conecta a quien busca dónde tocar con quien tiene el espacio.</p>
+        </div>
+
+        <div class="audience">
+          <article class="audience__item reveal">
+            <div class="audience__media" data-img-slot="tour"></div>
+            <div class="audience__body">
+              <span class="tag">Artistas · Managers · Promotores</span>
+              <h3>Planifica tu gira sin fricción</h3>
+              <p>Encuentra el espacio que encaja con tu show: por ciudad, por aforo, por equipamiento técnico. Compara opciones y contacta al responsable de booking directamente.</p>
+              <ul class="ticks">
+                <li>Búsqueda por nombre, aforo y población</li>
+                <li>Rider técnico descargable en cada sala</li>
+                <li>Favoritos para armar tu ruta de gira</li>
+              </ul>
+              <a href="#waitlist" class="link-arrow">Empieza a explorar &rarr;</a>
+            </div>
+          </article>
+
+          <article class="audience__item audience__item--rev reveal" id="promociona">
+            <div class="audience__media" data-img-slot="venue-promo"></div>
+            <div class="audience__body">
+              <span class="tag">Salas y espacios</span>
+              <h3>Gana visibilidad. Cierra más conciertos.</h3>
+              <p>Pon tu sala delante de los promotores y managers que de verdad programan giras. Gestiona tu ficha, recibe propuestas y destaca como espacio recomendado.</p>
+              <ul class="ticks">
+                <li>Ficha autogestionada con tus datos y rider</li>
+                <li>Propuestas de booking directas a tu bandeja</li>
+                <li>Opción de aparecer como espacio Recomendado</li>
+              </ul>
+              <a href="#waitlist" class="link-arrow link-arrow--success">Promociona tu espacio &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section" id="como">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Cómo funciona</span>
+          <h2>De la búsqueda al concierto, en tres pasos</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Descubre</h3>
+            <p>Filtra el catálogo de espacios por ciudad, aforo y población hasta dar con el que encaja con tu gira.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Consulta la ficha</h3>
+            <p>Revisa aforo, ubicación, contactos de reservas y descarga el rider técnico de la sala.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Contacta</h3>
+            <p>Escribe al responsable del espacio desde la mensajería interna y cierra tu fecha.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LA FICHA / FEATURES ============ -->
+    <section class="section section--dark" id="ficha">
+      <div class="container feature-split">
+        <div class="feature-split__copy reveal">
+          <span class="kicker kicker--light">La ficha de espacio</span>
+          <h2>Todo lo que necesitas saber de una sala, en una pantalla</h2>
+          <p class="lead lead--light">Dejamos de lado las llamadas y los emails sin respuesta. Cada espacio en Giraverse trae la información que un promotor necesita para decidir.</p>
+          <div class="feature-grid">
+            <div class="mini mini--dark"><h4>Aforo en pax</h4><p>Capacidad real del espacio.</p></div>
+            <div class="mini mini--dark"><h4>Ubicación</h4><p>Ciudad, provincia y país.</p></div>
+            <div class="mini mini--dark"><h4>Contacto de reservas</h4><p>Responsable de booking y production.</p></div>
+            <div class="mini mini--dark"><h4>Rider técnico</h4><p>PDF descargable de la sala.</p></div>
+            <div class="mini mini--dark"><h4>Redes sociales</h4><p>Enlaces directos del espacio.</p></div>
+            <div class="mini mini--dark"><h4>Contacto directo</h4><p>Mensajería interna integrada.</p></div>
+          </div>
+        </div>
+        <div class="feature-split__visual reveal">
+          <div class="venue-detail">
+            <div class="venue-detail__img" data-img-slot="venue-detail"></div>
+            <div class="venue-detail__body">
+              <div class="venue-detail__tags">
+                <span class="pill">España</span>
+                <span class="pill">Barcelona</span>
+                <span class="pill">450 pax</span>
+              </div>
+              <h3>Almodo2bar</h3>
+              <p>Club de música en vivo en el corazón de Barcelona. Programación de directos toda la semana.</p>
+              <div class="venue-detail__actions">
+                <button class="btn btn--primary btn--sm">Ver rider de sala</button>
+                <button class="btn btn--success btn--sm">Contacta</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIUDADES ============ -->
+    <section class="section" id="ciudades">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Espacios por población</span>
+          <h2>Empezamos por España, ciudad a ciudad</h2>
+          <p class="lead">El catálogo crece cada semana con nuevas salas verificadas.</p>
+        </div>
+
+        <div class="cities reveal">
+          <a class="city" data-img-slot="city-madrid"><span class="city__name">Madrid</span></a>
+          <a class="city" data-img-slot="city-barcelona"><span class="city__name">Barcelona</span></a>
+          <a class="city" data-img-slot="city-valencia"><span class="city__name">Valencia</span></a>
+          <a class="city" data-img-slot="city-ourense"><span class="city__name">Ourense</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIPOS DE ESPACIO ============ -->
+    <section class="section section--alt" id="tipos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Tipos de espacio</span>
+          <h2>Cualquier escenario cabe en Giraverse</h2>
+        </div>
+        <div class="chips reveal">
+          <span class="chip">Salas de concierto</span>
+          <span class="chip">Clubs &amp; discotecas</span>
+          <span class="chip">Auditorios</span>
+          <span class="chip">Teatros</span>
+          <span class="chip">Cafés cantante</span>
+          <span class="chip">Festivales</span>
+          <span class="chip">Tablaos</span>
+          <span class="chip">Centros culturales</span>
+          <span class="chip">Espacios municipales</span>
+          <span class="chip">Salas pequeñas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMUNIDAD ============ -->
+    <section class="section" id="comunidad">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Comunidad</span>
+          <h2>Más que un directorio: un sector que se habla</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="card card--wide reveal">
+            <h3>Blog &amp; noticias</h3>
+            <p>Tendencias del directo, novedades del sector y consejos para programar mejor tus giras y llenar tu sala.</p>
+          </article>
+          <article class="card card--wide reveal">
+            <h3>Foro del directo</h3>
+            <p>Un espacio para que artistas, salas y promotores compartan dudas, contactos y oportunidades. La red del live music español.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / WAITLIST ============ -->
+    <section class="cta" id="waitlist">
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title">Sé de los primeros en Giraverse</h2>
+        <p class="cta__sub">Déjanos tu correo y te avisamos en cuanto abramos el acceso. Sin spam, solo lo importante.</p>
+
+        <form class="waitlist" id="waitlistForm" novalidate>
+          <div class="waitlist__row">
+            <label class="sr-only" for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+            <button type="submit" class="btn btn--primary btn--lg">Quiero entrar</button>
+          </div>
+          <fieldset class="waitlist__roles">
+            <legend class="sr-only">Soy</legend>
+            <label><input type="radio" name="role" value="promotor" checked /> Busco espacios</label>
+            <label><input type="radio" name="role" value="sala" /> Tengo una sala</label>
+            <label><input type="radio" name="role" value="otro" /> Otro</label>
+          </fieldset>
+          <p class="waitlist__msg" id="waitlistMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="kicker">Preguntas frecuentes</span>
+          <h2>Todo lo que quieres saber</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item reveal">
+            <summary>¿Qué es exactamente Giraverse?</summary>
+            <p>Un directorio y marketplace de espacios escénicos de España. Reúne salas, clubs, auditorios y teatros con sus datos clave —aforo, ubicación, contacto de booking y rider técnico— para que artistas, managers y promotores encuentren dónde actuar, y para que las salas ganen visibilidad.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Tengo que pagar para buscar salas?</summary>
+            <p>Explorar el catálogo y consultar las fichas será gratuito para artistas y promotores. Las salas dispondrán de opciones de promoción de pago para destacar como espacios recomendados.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Soy una sala, ¿cómo aparezco en Giraverse?</summary>
+            <p>Podrás crear y gestionar tu propia ficha con tus datos, fotos y rider. Apúntate como "Tengo una sala" en la lista de espera y te contactamos para darte de alta.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Qué es el rider técnico y por qué importa?</summary>
+            <p>Es el documento con las especificaciones técnicas del espacio (sonido, luces, escenario). Tenerlo descargable en cada ficha ahorra decenas de emails a la hora de planificar un concierto.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>¿Está disponible ya?</summary>
+            <p>Estamos en fase de acceso anticipado con un catálogo inicial de espacios en varias ciudades. Apúntate a la lista y serás de los primeros en entrar cuando abramos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="acceso">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="brand brand--footer">
+          <svg class="brand__mark" width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 3 27 9.5v13L16 29 5 22.5v-13L16 3Z" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+            <path d="M16 10l5.5 3.25v6.5L16 23l-5.5-3.25v-6.5L16 10Z" fill="currentColor"/>
+          </svg>
+          <span class="brand__word">giraverse</span>
+        </a>
+        <p>El universo de las salas en vivo. Encuentra dónde tocar, llena tu escenario.</p>
+        <p class="footer__gov" data-img-slot="gov-logo">Con el respaldo del Ministerio de Cultura · Gobierno de España</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Producto">
+        <h5>Producto</h5>
+        <a href="#que-es">Qué es</a>
+        <a href="#publicos">Para quién</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#ciudades">Ciudades</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Recursos">
+        <h5>Recursos</h5>
+        <a href="#comunidad">Blog &amp; foro</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hola@giraverse.es">Contacto</a>
+      </nav>
+
+      <div class="footer__col">
+        <h5>Síguenos</h5>
+        <a href="#" rel="noopener">Instagram</a>
+        <a href="#" rel="noopener">LinkedIn</a>
+        <a href="#" rel="noopener">TikTok</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Giraverse. Todos los derechos reservados.</p>
+      <div class="footer__legal">
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
