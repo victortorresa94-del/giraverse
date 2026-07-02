@@ -10,3 +10,7 @@ desktop.ini
 # Logs / temp
 *.log
 .tmp/
+
+# Fuente de marca original (pesada, ~80MB) — se queda local, no en repo/deploy.
+# Las versiones web optimizadas viven en assets/brand/ y assets/icons/.
+Material Giraverse/

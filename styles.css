@@ -15,21 +15,29 @@
   --brand-50:     #FFF1E8;
   --cream:        #FFE0C5;   /* tags de ubicación */
 
-  /* Tinta / neutros (azul-negro de marca) */
-  --ink:          #11181C;
-  --ink-2:        #3B454D;
-  --muted:        #6B767E;
-  --line:         rgba(17, 17, 17, 0.10);
-  --line-strong:  rgba(17, 17, 17, 0.16);
+  /* Gradient Orange oficial (guía de marca) */
+  --grad-1:       #FFAA00;   /*   0% */
+  --grad-2:       #FF7B2E;   /*  29% */
+  --grad-3:       #EA5600;   /*  61% */
+  --grad-4:       #CB0202;   /* 100% */
+  --grad-orange:  linear-gradient(100deg, #FFAA00 0%, #FF7B2E 32%, #EA5600 64%, #CB0202 100%);
 
-  /* Fondos */
+  /* Tinta / neutros — Dust Black oficial */
+  --ink:          #171617;   /* Dust Black */
+  --ink-2:        #46413F;
+  --muted:        #6B7278;
+  --line:         rgba(23, 22, 23, 0.10);
+  --line-strong:  rgba(23, 22, 23, 0.16);
+
+  /* Fondos — Sun White oficial */
+  --sun:          #FDF6F6;   /* Sun White */
   --bg:           #FFFFFF;
-  --bg-alt:       #FAF8F6;
-  --bg-cream:     #FFF7F1;
+  --bg-alt:       #F7EFED;
+  --bg-cream:     #FFF3EC;
 
-  /* Oscuro (secciones tipo "concierto") */
-  --dark:         #0C0A09;
-  --dark-2:       #15110E;
+  /* Oscuro (Dust Black, secciones tipo "concierto") */
+  --dark:         #171617;
+  --dark-2:       #100F10;
   --dark-line:    rgba(255, 255, 255, 0.10);
   --on-dark:      #F5F2EF;
   --on-dark-mut:  #A9A29C;
@@ -77,7 +85,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font);
   color: var(--ink);
-  background: var(--bg);
+  background: var(--sun);
   line-height: 1.6;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
@@ -127,7 +135,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--brand-300);
 }
 .grad {
-  background: linear-gradient(96deg, var(--brand-300) 0%, var(--brand) 60%);
+  background: linear-gradient(100deg, #FFAA00 0%, #FF7B2E 34%, #EA5600 68%, #CB0202 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
@@ -181,10 +189,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav.is-scrolled { border-bottom-color: var(--line); box-shadow: var(--sh-sm); }
 .nav__inner { display: flex; align-items: center; gap: 28px; height: 68px; }
 
-.brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-weight: 700; }
-.brand__mark { color: var(--brand); flex: none; }
-.brand__word { font-size: 21px; letter-spacing: -0.02em; }
-.brand--footer .brand__word { color: var(--ink); }
+.brand { display: inline-flex; align-items: center; gap: 9px; }
+.brand__pin { height: 28px; width: auto; flex: none; }
+.brand__wordmark { height: 18px; width: auto; display: block; }
+.brand--footer .brand__pin { height: 26px; }
+.brand--footer .brand__wordmark { height: 17px; }
 
 .nav__links { display: flex; gap: 26px; margin-left: 12px; }
 .nav__links a {
@@ -433,8 +442,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cta {
   position: relative; isolation: isolate; overflow: hidden;
   background:
-    radial-gradient(800px 400px at 80% -20%, rgba(255,138,77,.5), transparent 60%),
-    linear-gradient(135deg, var(--brand) 0%, #d04600 100%);
+    radial-gradient(760px 420px at 82% -25%, rgba(255,170,0,.55), transparent 60%),
+    linear-gradient(120deg, #FF7B2E 0%, #EA5600 55%, #CB0202 100%);
   color: #fff; padding-block: clamp(64px, 9vw, 110px);
 }
 .cta__inner { max-width: 660px; margin-inline: auto; text-align: center; }
