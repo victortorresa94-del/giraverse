@@ -18,8 +18,12 @@
   <!-- Fonts: Outfit (familia de marca) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" />
+  </noscript>
 
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
@@ -34,7 +38,8 @@
     <div class="container nav__inner">
       <a href="#top" class="brand" aria-label="Giraverse — inicio">
         <img class="brand__pin" src="assets/brand/mark-pin.png" alt="" width="30" height="30" />
-        <img class="brand__wordmark" src="assets/brand/wordmark-dark.png" alt="Giraverse" />
+        <img class="brand__wordmark brand__wordmark--light" src="assets/brand/wordmark-white.png" alt="Giraverse" />
+        <img class="brand__wordmark brand__wordmark--dark" src="assets/brand/wordmark-dark.png" alt="" />
       </a>
 
       <nav class="nav__links" aria-label="Principal">
@@ -46,8 +51,10 @@
       </nav>
 
       <div class="nav__cta">
-        <a href="#acceso" class="btn btn--ghost">Iniciar sesión</a>
-        <a href="#waitlist" class="btn btn--primary">Únete</a>
+        <a href="https://app.giraverse.es/" class="btn btn--ghost" target="_blank" rel="noopener">Iniciar sesión</a>
+        <a href="https://app.giraverse.es/" class="btn btn--gradient" target="_blank" rel="noopener">Entrar a la app
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
 
       <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
@@ -60,7 +67,7 @@
       <a href="#como">Cómo funciona</a>
       <a href="#ciudades">Ciudades</a>
       <a href="#faq">FAQ</a>
-      <a href="#waitlist" class="btn btn--primary btn--block">Únete a la lista</a>
+      <a href="https://app.giraverse.es/" class="btn btn--primary btn--block" target="_blank" rel="noopener">Entrar a la app</a>
     </div>
   </header>
 
@@ -68,48 +75,79 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
+      <!-- Foto derecha + capas de profundidad -->
       <div class="hero__bg" aria-hidden="true">
-        <div class="hero__photo" data-img-slot="hero-bg"></div>
+        <div class="hero__photo" data-img-slot="hero-stage"></div>
+        <div class="hero__fade"></div>
         <div class="hero__glow"></div>
-        <div class="hero__veil"></div>
+        <div class="hero__radial"></div>
+        <div class="hero__arc"></div>
+        <div class="hero__noise"></div>
       </div>
 
       <div class="container hero__inner">
-        <p class="eyebrow reveal">El universo de las salas en vivo</p>
-        <h1 class="hero__title reveal">
-          Encuentra el espacio perfecto<br />
-          <span class="grad">para tu próxima gira</span>
-        </h1>
-        <p class="hero__sub reveal">
-          Giraverse reúne los espacios escénicos de España en un solo lugar.
-          Aforo, ubicación, rider técnico y contacto de booking — sin perderte
-          entre PDFs, emails y webs imposibles de encontrar.
-        </p>
-        <div class="hero__actions reveal">
-          <a href="#waitlist" class="btn btn--primary btn--lg">Explora espacios</a>
-          <a href="#promociona" class="btn btn--soft btn--lg">Tengo una sala</a>
-        </div>
+        <div class="hero__content">
+          <h1 class="hero__title reveal">
+            El universo de<br />
+            <span class="grad">las salas en vivo.</span>
+          </h1>
 
-        <div class="hero__trust reveal">
-          <div class="trust__item"><strong>+16</strong><span>espacios en catálogo</span></div>
-          <div class="trust__divider"></div>
-          <div class="trust__item"><strong>4</strong><span>ciudades y creciendo</span></div>
-          <div class="trust__divider"></div>
-          <div class="trust__item"><strong>Rider</strong><span>técnico descargable</span></div>
-        </div>
-      </div>
+          <p class="hero__kicker reveal">
+            Encuentra el espacio perfecto <span class="grad">para tu próxima gira</span>
+          </p>
 
-      <!-- Tarjeta flotante estilo app -->
-      <div class="hero__visual reveal">
-        <div class="venue-card venue-card--float">
-          <div class="venue-card__img" data-img-slot="venue-hero">
-            <span class="venue-card__badge">Recomendado</span>
-            <button class="venue-card__like" aria-label="Guardar">♡</button>
+          <p class="hero__sub reveal">
+            Giraverse reúne los espacios escénicos de España en un solo lugar.
+            Aforo, ubicación, rider técnico y contacto de booking — sin perderte
+            entre PDFs, emails y webs imposibles de encontrar.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="https://app.giraverse.es/" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
+              Explora espacios
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#promociona" class="btn btn--glass btn--lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+              Tengo una sala
+            </a>
           </div>
-          <div class="venue-card__body">
-            <span class="venue-card__loc">BARCELONA · ESPAÑA</span>
-            <span class="venue-card__cap">Aforo: 150 pax</span>
-            <h3>Sala Vol</h3>
+
+          <div class="hero__stats reveal">
+            <div class="stat">
+              <span class="stat__ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div class="stat__txt"><strong>+16</strong><span>espacios en catálogo</span></div>
+            </div>
+            <div class="stat">
+              <span class="stat__ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+              <div class="stat__txt"><strong>4</strong><span>ciudades y creciendo</span></div>
+            </div>
+            <div class="stat">
+              <span class="stat__ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h2l2-6 4 14 3-9 2 3h3"/></svg></span>
+              <div class="stat__txt"><strong>Rider</strong><span>técnico descargable</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card flotante estilo app -->
+        <div class="hero__aside reveal">
+          <div class="venue-card venue-card--float">
+            <div class="venue-card__img" data-img-slot="venue-card">
+              <span class="venue-card__badge">Recomendado</span>
+              <button class="venue-card__like" aria-label="Guardar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+              </button>
+            </div>
+            <div class="venue-card__body">
+              <span class="venue-card__loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> BARCELONA · ESPAÑA</span>
+              <span class="venue-card__cap">Aforo: 150 pax</span>
+              <div class="venue-card__foot">
+                <h3>Sala Vol</h3>
+                <button class="venue-card__go" aria-label="Ver espacio">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +219,7 @@
                 <li>Rider técnico descargable en cada sala</li>
                 <li>Favoritos para armar tu ruta de gira</li>
               </ul>
-              <a href="#waitlist" class="link-arrow">Empieza a explorar &rarr;</a>
+              <a href="https://app.giraverse.es/" class="link-arrow" target="_blank" rel="noopener">Empieza a explorar &rarr;</a>
             </div>
           </article>
 
@@ -196,7 +234,7 @@
                 <li>Propuestas de booking directas a tu bandeja</li>
                 <li>Opción de aparecer como espacio Recomendado</li>
               </ul>
-              <a href="#waitlist" class="link-arrow link-arrow--success">Promociona tu espacio &rarr;</a>
+              <a href="https://app.giraverse.es/" class="link-arrow link-arrow--success" target="_blank" rel="noopener">Promociona tu espacio &rarr;</a>
             </div>
           </article>
         </div>
@@ -328,26 +366,14 @@
       </div>
     </section>
 
-    <!-- ============ CTA / WAITLIST ============ -->
+    <!-- ============ CTA / ACCESO ============ -->
     <section class="cta" id="waitlist">
       <div class="container cta__inner reveal">
-        <h2 class="cta__title">Sé de los primeros en Giraverse</h2>
-        <p class="cta__sub">Déjanos tu correo y te avisamos en cuanto abramos el acceso. Sin spam, solo lo importante.</p>
-
-        <form class="waitlist" id="waitlistForm" novalidate>
-          <div class="waitlist__row">
-            <label class="sr-only" for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
-            <button type="submit" class="btn btn--primary btn--lg">Quiero entrar</button>
-          </div>
-          <fieldset class="waitlist__roles">
-            <legend class="sr-only">Soy</legend>
-            <label><input type="radio" name="role" value="promotor" checked /> Busco espacios</label>
-            <label><input type="radio" name="role" value="sala" /> Tengo una sala</label>
-            <label><input type="radio" name="role" value="otro" /> Otro</label>
-          </fieldset>
-          <p class="waitlist__msg" id="waitlistMsg" role="status" aria-live="polite"></p>
-        </form>
+        <h2 class="cta__title">Entra y descúbrelo tú mismo</h2>
+        <p class="cta__sub">La plataforma ya está abierta. Explora el catálogo de espacios escénicos de España, guarda favoritos y contacta salas directamente — sin registro previo para empezar.</p>
+        <div class="cta__actions">
+          <a href="https://app.giraverse.es/" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Entrar a Giraverse &rarr;</a>
+        </div>
       </div>
     </section>
 
@@ -378,7 +404,7 @@
           </details>
           <details class="faq__item reveal">
             <summary>¿Está disponible ya?</summary>
-            <p>Estamos en fase de acceso anticipado con un catálogo inicial de espacios en varias ciudades. Apúntate a la lista y serás de los primeros en entrar cuando abramos.</p>
+            <p>Sí. La plataforma ya está disponible con un catálogo inicial de espacios en varias ciudades. <a href="https://app.giraverse.es/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Entra aquí</a> y empieza a explorar.</p>
           </details>
         </div>
       </div>
