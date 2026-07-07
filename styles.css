@@ -202,7 +202,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: linear-gradient(180deg, rgba(9,8,8,.82) 0%, rgba(9,8,8,.42) 55%, transparent 100%);
+  background: transparent;
   border-bottom: 1px solid transparent;
   transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
 }
@@ -283,14 +283,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__fade {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, #0B0A0A 30%, rgba(11,10,10,.62) 50%, rgba(11,10,10,.12) 72%, rgba(11,10,10,.5) 100%),
-    linear-gradient(180deg, rgba(11,10,10,.4) 0%, transparent 26%, transparent 58%, rgba(11,10,10,.82) 100%);
+    linear-gradient(90deg, #0B0A0A 28%, rgba(11,10,10,.60) 48%, rgba(11,10,10,.10) 72%, rgba(11,10,10,.45) 100%),
+    linear-gradient(180deg, rgba(11,10,10,.82) 0%, rgba(11,10,10,.34) 9%, transparent 24%, transparent 56%, rgba(11,10,10,.85) 100%);
 }
 /* Luz cálida que "sale" del escenario */
 .hero__glow {
-  position: absolute; top: 6%; right: 4%; width: 56vw; height: 56vw; max-width: 780px; max-height: 780px;
-  background: radial-gradient(circle, rgba(255,120,40,.30), rgba(255,60,90,.12) 42%, transparent 66%);
-  filter: blur(34px); z-index: -1; pointer-events: none;
+  position: absolute; top: 8%; right: 2%; width: 52vw; height: 52vw; max-width: 720px; max-height: 720px;
+  background: radial-gradient(circle, rgba(255,140,60,.15), rgba(120,80,220,.08) 44%, transparent 66%);
+  filter: blur(38px); z-index: -1; pointer-events: none;
 }
 /* Halo radial detrás del titular */
 .hero__radial {
@@ -343,12 +343,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* Módulo de estadísticas */
 .hero__stats {
-  margin-top: 34px; display: inline-flex; flex-wrap: wrap; gap: clamp(14px, 2.2vw, 26px);
-  padding: 16px clamp(18px, 2.4vw, 24px); border: 1px solid rgba(255,255,255,.10);
+  margin-top: 34px; display: flex; width: 100%; max-width: 552px; gap: clamp(10px, 1.6vw, 20px);
+  padding: 16px clamp(16px, 2vw, 22px); border: 1px solid rgba(255,255,255,.10);
   border-radius: 16px; background: rgba(255,255,255,.03); backdrop-filter: blur(6px);
 }
-.stat { display: flex; align-items: center; gap: 12px; }
-.stat + .stat { border-left: 1px solid rgba(255,255,255,.09); padding-left: clamp(14px, 2.2vw, 28px); }
+.stat { display: flex; align-items: center; gap: 11px; flex: 1 1 0; min-width: 0; }
+.stat + .stat { border-left: 1px solid rgba(255,255,255,.09); padding-left: clamp(10px, 1.6vw, 20px); }
 .stat__ico {
   display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; flex: none;
   border: 1px solid rgba(255,120,60,.35); color: var(--brand-300);
@@ -611,8 +611,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    Cada slot data-img-slot recibe su foto como background cover.
    ============================================================ */
 .hero__photo[data-img-slot="hero-stage"] {
-  background-image: url("assets/img/hero-live.jpg");
-  background-position: 58% center; background-size: cover;
+  background-image: url("assets/img/hero-cine3.jpg");
+  background-position: 55% center; background-size: cover;
 }
 .venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/card-stage.jpg"); }
 .audience__media[data-img-slot="tour"]          { background-image: url("assets/img/tour.jpg"); }
