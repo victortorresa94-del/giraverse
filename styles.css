@@ -202,7 +202,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 .nav {
   position: sticky; top: 0; z-index: 100;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(9,8,8,.82) 0%, rgba(9,8,8,.42) 55%, transparent 100%);
   border-bottom: 1px solid transparent;
   transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
 }
@@ -226,7 +226,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .nav__links { display: flex; gap: 26px; margin-left: 12px; }
 .nav__links a {
-  font-size: 15px; font-weight: 500; color: rgba(245,242,239,.82); position: relative; padding: 4px 0;
+  font-size: 15px; font-weight: 500; color: rgba(245,242,239,.92); position: relative; padding: 4px 0;
   transition: color var(--t) var(--ease);
 }
 .nav.is-scrolled .nav__links a { color: var(--ink-2); }
@@ -319,32 +319,33 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(42px, 5.6vw, 82px);
-  font-weight: 600; line-height: 1.03; letter-spacing: -0.025em; color: #fff;
+  font-size: clamp(37px, 4vw, 60px);
+  font-weight: 600; line-height: 1.06; letter-spacing: -0.02em; color: #fff;
+  text-wrap: balance;
 }
 .hero__title .grad {
   background: linear-gradient(104deg, #FFB347 0%, #FF7A2F 48%, #FF5A6D 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero__kicker {
-  margin-top: 22px; font-size: clamp(11.5px, 1.05vw, 13.5px); font-weight: 600;
-  letter-spacing: .26em; text-transform: uppercase; color: rgba(245,242,239,.68);
+  margin-top: 18px; font-size: clamp(11px, 1vw, 13px); font-weight: 600;
+  letter-spacing: .26em; text-transform: uppercase; color: rgba(245,242,239,.66);
 }
 .hero__kicker .grad {
   background: linear-gradient(100deg, #FFB347, #FF7A2F, #FF5A6D);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero__sub {
-  margin-top: 26px; font-size: clamp(15.5px, 1.3vw, 18px); line-height: 1.62;
-  color: var(--on-dark-mut); max-width: 470px;
+  margin-top: 22px; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6;
+  color: var(--on-dark-mut); max-width: 452px;
 }
-.hero__actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
+.hero__actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Módulo de estadísticas */
 .hero__stats {
-  margin-top: 42px; display: inline-flex; flex-wrap: wrap; gap: clamp(14px, 2.2vw, 28px);
-  padding: 18px clamp(18px, 2.4vw, 26px); border: 1px solid rgba(255,255,255,.10);
-  border-radius: 18px; background: rgba(255,255,255,.03); backdrop-filter: blur(6px);
+  margin-top: 34px; display: inline-flex; flex-wrap: wrap; gap: clamp(14px, 2.2vw, 26px);
+  padding: 16px clamp(18px, 2.4vw, 24px); border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px; background: rgba(255,255,255,.03); backdrop-filter: blur(6px);
 }
 .stat { display: flex; align-items: center; gap: 12px; }
 .stat + .stat { border-left: 1px solid rgba(255,255,255,.09); padding-left: clamp(14px, 2.2vw, 28px); }
@@ -360,10 +361,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Card flotante (glass oscuro, sale del escenario) */
 .hero__aside { position: relative; display: flex; justify-content: flex-end; }
 .venue-card {
-  width: min(345px, 100%); color: var(--on-dark);
-  background: rgba(24,19,19,.66); border: 1px solid rgba(255,255,255,.10);
-  border-radius: var(--r-xl); overflow: hidden; backdrop-filter: blur(14px);
-  box-shadow: 0 44px 90px rgba(0,0,0,.6), 0 10px 26px rgba(0,0,0,.42);
+  width: min(312px, 100%); color: var(--on-dark);
+  background: rgba(22,17,17,.62); border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--r-xl); overflow: hidden; backdrop-filter: blur(16px);
+  box-shadow: 0 44px 90px rgba(0,0,0,.62), 0 10px 26px rgba(0,0,0,.42);
 }
 .venue-card--float { animation: floaty 9s ease-in-out infinite; }
 @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
@@ -610,10 +611,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    Cada slot data-img-slot recibe su foto como background cover.
    ============================================================ */
 .hero__photo[data-img-slot="hero-stage"] {
-  background-image: url("assets/img/venue-promo.jpg");
-  background-position: center; background-size: cover;
+  background-image: url("assets/img/hero-live.jpg");
+  background-position: 58% center; background-size: cover;
 }
-.venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/venue-hero.jpg"); }
+.venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/card-stage.jpg"); }
 .audience__media[data-img-slot="tour"]          { background-image: url("assets/img/tour.jpg"); }
 .audience__media[data-img-slot="venue-promo"]   { background-image: url("assets/img/venue-promo.jpg"); }
 .venue-detail__img[data-img-slot="venue-detail"]{ background-image: url("assets/img/venue-detail.jpg"); }
