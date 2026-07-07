@@ -201,18 +201,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    NAV
    ============================================================ */
 .nav {
-  position: sticky; top: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
+  border: none;
+  box-shadow: none;
+  transition: background var(--t) var(--ease), box-shadow var(--t) var(--ease);
 }
 .nav.is-scrolled {
   background: rgba(253,246,246,.82);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
-  border-bottom-color: var(--line); box-shadow: var(--sh-sm);
+  box-shadow: var(--sh-sm);
 }
-.nav__inner { display: flex; align-items: center; gap: 28px; height: 72px; }
+.nav__inner { display: flex; align-items: center; gap: 28px; height: 56px; padding: 0 var(--pad); }
 
 .brand { display: inline-flex; align-items: center; gap: 9px; }
 .brand__pin { height: 28px; width: auto; flex: none; }
@@ -254,7 +255,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .nav__mobile {
   display: none; flex-direction: column; gap: 4px; padding: 8px var(--pad) 22px;
-  background: rgba(255,255,255,.98); border-bottom: 1px solid var(--line);
+  position: fixed; top: 56px; left: 0; right: 0; z-index: 99;
+  background: rgba(253,246,246,.98); border-bottom: 1px solid var(--line); box-shadow: var(--sh-md);
 }
 .nav__mobile.is-open { display: flex; }
 .nav__mobile a { padding: 13px 4px; font-weight: 500; color: var(--ink-2); border-bottom: 1px solid var(--line); }
@@ -359,7 +361,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .stat__txt span { font-size: 12.5px; color: var(--on-dark-mut); }
 
 /* Card flotante (glass oscuro, sale del escenario) */
-.hero__aside { position: relative; display: flex; justify-content: flex-end; }
+.hero__aside { position: relative; display: flex; justify-content: flex-end; align-self: end; }
 .venue-card {
   width: min(312px, 100%); color: var(--on-dark);
   background: rgba(22,17,17,.62); border: 1px solid rgba(255,255,255,.10);
@@ -611,7 +613,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    Cada slot data-img-slot recibe su foto como background cover.
    ============================================================ */
 .hero__photo[data-img-slot="hero-stage"] {
-  background-image: url("assets/img/hero-cine3.jpg");
+  background-image: url("assets/img/hero-cine.jpg");
   background-position: 55% center; background-size: cover;
 }
 .venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/card-stage.jpg"); }
