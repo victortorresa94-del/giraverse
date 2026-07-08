@@ -616,7 +616,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background-image: url("assets/img/hero-cine.jpg");
   background-position: 55% center; background-size: cover;
 }
-.venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/card-stage2.jpg"); }
+.venue-card__img[data-img-slot="venue-card"]   { background-image: url("assets/img/venue-real-salavol.jpg"); background-position: center 38%; }
 .audience__media[data-img-slot="tour"]          { background-image: url("assets/img/tour.jpg"); }
 .audience__media[data-img-slot="venue-promo"]   { background-image: url("assets/img/venue-promo.jpg"); }
 .venue-detail__img[data-img-slot="venue-detail"]{ background-image: url("assets/img/venue-detail.jpg"); }
