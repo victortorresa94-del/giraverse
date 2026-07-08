@@ -81,6 +81,7 @@
 /* ---------- RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+[id] { scroll-margin-top: 74px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -403,18 +404,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    STRIP / RESPALDO
    ============================================================ */
-.strip { border-bottom: 1px solid var(--line); background: var(--bg); }
-.strip__inner {
-  display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center;
-  padding-block: 26px; text-align: center;
+/* Respaldo institucional (bajo Ciudades) */
+.backing {
+  margin-top: clamp(48px, 7vw, 84px);
+  display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;
 }
-.strip__label { font-size: 13px; color: var(--muted); font-weight: 500; }
-.strip__logos { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
-.strip__logo { font-size: 15px; font-weight: 600; color: var(--ink-2); opacity: .8; }
-.strip__logo--gov { color: var(--ink); }
-.strip__gov { height: 46px; width: auto; display: block; }
-.strip__sep { width: 1px; height: 30px; background: var(--line); align-self: center; }
-@media (max-width: 560px) { .strip__gov { height: 40px; } .strip__sep { display: none; } }
+.backing__label { font-size: 13px; letter-spacing: .04em; color: var(--muted); font-weight: 500; }
+.backing__logo { height: 72px; width: auto; display: block; }
+@media (max-width: 560px) { .backing__logo { height: 56px; } }
 
 /* ============================================================
    CARDS / GRID
@@ -545,16 +542,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 .cta {
   position: relative; isolation: isolate; overflow: hidden;
-  background:
-    radial-gradient(760px 420px at 82% -25%, rgba(255,170,0,.55), transparent 60%),
-    linear-gradient(120deg, #FF7B2E 0%, #EA5600 55%, #CB0202 100%);
-  color: #fff; padding-block: clamp(64px, 9vw, 110px);
+  background: #0B0A0A; color: #fff;
+  padding-block: clamp(76px, 11vw, 132px);
 }
-.cta__inner { max-width: 660px; margin-inline: auto; text-align: center; }
-.cta__title { font-family: var(--font-display); font-size: clamp(32px, 4.6vw, 54px); font-weight: 600; letter-spacing: -.02em; line-height: 1.04; }
-.cta__sub { margin-top: 16px; font-size: 18px; color: rgba(255,255,255,.9); }
-
-.cta__actions { margin-top: 34px; display: flex; justify-content: center; }
+.cta__bg { position: absolute; inset: 0; z-index: -2; }
+.cta__photo {
+  position: absolute; inset: 0; background: #0B0A0A center/cover no-repeat;
+  background-image: url("assets/img/hero-cine.jpg"); opacity: .30;
+}
+.cta__veil {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(720px 460px at 50% -8%, rgba(255,120,40,.34), transparent 62%),
+    linear-gradient(180deg, rgba(11,10,10,.62) 0%, rgba(11,10,10,.88) 100%);
+}
+.cta__inner { max-width: 720px; margin-inline: auto; text-align: center; position: relative; z-index: 1; }
+.cta__eyebrow {
+  display: inline-block; margin-bottom: 16px; font-size: 12.5px; font-weight: 600;
+  letter-spacing: .24em; text-transform: uppercase;
+  background: linear-gradient(100deg, #FFB347, #FF7A2F, #FF5A6D);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.cta__title { font-family: var(--font-display); font-size: clamp(32px, 4.8vw, 56px); font-weight: 600; letter-spacing: -.02em; line-height: 1.05; color: #fff; }
+.cta__sub { margin-top: 18px; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.6; color: var(--on-dark-mut); max-width: 580px; margin-inline: auto; }
+.cta__actions { margin-top: 32px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.cta__note { margin-top: 18px; font-size: 13px; color: var(--on-dark-mut); }
+@media (max-width: 560px) { .cta__actions { flex-direction: column; } .cta__actions .btn { width: 100%; justify-content: center; } }
 .waitlist { margin-top: 34px; }
 .waitlist__row { display: flex; gap: 10px; background: rgba(255,255,255,.14); padding: 8px; border-radius: 14px; border: 1px solid rgba(255,255,255,.25); }
 .waitlist__row input {

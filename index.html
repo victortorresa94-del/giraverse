@@ -103,7 +103,7 @@
           </p>
 
           <div class="hero__actions reveal">
-            <a href="https://app.giraverse.es/" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
+            <a href="#alta" class="btn btn--gradient btn--lg">
               Explora espacios
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -149,18 +149,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ STRIP / RESPALDO ============ -->
-    <section class="strip">
-      <div class="container strip__inner reveal">
-        <span class="strip__label">Un proyecto cultural respaldado por</span>
-        <div class="strip__logos">
-          <img class="strip__gov" src="assets/brand/ministerio-cultura.png" alt="Gobierno de España · Ministerio de Cultura" />
-          <span class="strip__sep" aria-hidden="true"></span>
-          <span class="strip__logo">Ecosistema Artiverse</span>
         </div>
       </div>
     </section>
@@ -220,7 +208,7 @@
                 <li>Rider técnico descargable en cada sala</li>
                 <li>Favoritos para armar tu ruta de gira</li>
               </ul>
-              <a href="https://app.giraverse.es/" class="link-arrow" target="_blank" rel="noopener">Empieza a explorar &rarr;</a>
+              <a href="#alta" class="link-arrow">Empieza a explorar &rarr;</a>
             </div>
           </article>
 
@@ -298,8 +286,8 @@
               <h3>Almodo2bar</h3>
               <p>Club de música en vivo en el corazón de Barcelona. Programación de directos toda la semana.</p>
               <div class="venue-detail__actions">
-                <button class="btn btn--primary btn--sm">Ver rider de sala</button>
-                <button class="btn btn--success btn--sm">Contacta</button>
+                <a href="#alta" class="btn btn--primary btn--sm">Ver rider de sala</a>
+                <a href="#alta" class="btn btn--success btn--sm">Contacta</a>
               </div>
             </div>
           </div>
@@ -321,6 +309,12 @@
           <a class="city" data-img-slot="city-barcelona"><span class="city__name">Barcelona</span></a>
           <a class="city" data-img-slot="city-valencia"><span class="city__name">Valencia</span></a>
           <a class="city" data-img-slot="city-ourense"><span class="city__name">Ourense</span></a>
+        </div>
+
+        <!-- Respaldo institucional -->
+        <div class="backing reveal">
+          <span class="backing__label">Un proyecto cultural respaldado por</span>
+          <img class="backing__logo" src="assets/brand/ministerio-cultura.png" alt="Gobierno de España · Ministerio de Cultura" />
         </div>
       </div>
     </section>
@@ -367,17 +361,6 @@
       </div>
     </section>
 
-    <!-- ============ CTA / ACCESO ============ -->
-    <section class="cta" id="waitlist">
-      <div class="container cta__inner reveal">
-        <h2 class="cta__title">Entra y descúbrelo tú mismo</h2>
-        <p class="cta__sub">La plataforma ya está abierta. Explora el catálogo de espacios escénicos de España, guarda favoritos y contacta salas directamente — sin registro previo para empezar.</p>
-        <div class="cta__actions">
-          <a href="https://app.giraverse.es/" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Entrar a Giraverse &rarr;</a>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ FAQ ============ -->
     <section class="section section--alt" id="faq">
       <div class="container container--narrow">
@@ -408,6 +391,31 @@
             <p>Sí. La plataforma ya está disponible con un catálogo inicial de espacios en varias ciudades. <a href="https://app.giraverse.es/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Entra aquí</a> y empieza a explorar.</p>
           </details>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ BANNER DE ALTA (destino de los CTA "ver salas") ============ -->
+    <section class="cta" id="alta">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="cta__photo"></div>
+        <div class="cta__veil"></div>
+      </div>
+      <div class="container cta__inner reveal">
+        <span class="cta__eyebrow">Empieza gratis</span>
+        <h2 class="cta__title">Date de alta gratis y descubre dónde tocar</h2>
+        <p class="cta__sub">
+          Crea tu cuenta en Giraverse y entra al catálogo completo de salas de España:
+          aforo, rider técnico y contacto de booking de cada espacio. Gratis para
+          artistas, managers y promotores.
+        </p>
+        <div class="cta__actions">
+          <a href="https://app.giraverse.es/" class="btn btn--gradient btn--lg" target="_blank" rel="noopener">
+            Date de alta gratis
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://app.giraverse.es/" class="btn btn--glass btn--lg" target="_blank" rel="noopener">Tengo una sala</a>
+        </div>
+        <p class="cta__note">Sin tarjeta · Empiezas a explorar en segundos</p>
       </div>
     </section>
 
