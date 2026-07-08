@@ -412,6 +412,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .strip__logos { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
 .strip__logo { font-size: 15px; font-weight: 600; color: var(--ink-2); opacity: .8; }
 .strip__logo--gov { color: var(--ink); }
+.strip__gov { height: 46px; width: auto; display: block; }
+.strip__sep { width: 1px; height: 30px; background: var(--line); align-self: center; }
+@media (max-width: 560px) { .strip__gov { height: 40px; } .strip__sep { display: none; } }
 
 /* ============================================================
    CARDS / GRID
